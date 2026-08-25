@@ -2,11 +2,11 @@
   "version": 3,
   "workspaces": [
     {
-      "id": "w7",
+      "id": "wX",
       "custom_name": null,
-      "identity_cwd": "/Users/carlossantos/github/carlossantos/dotfiles",
+      "identity_cwd": "/Users/carlossantos/aptoide/Direct",
       "public_pane_numbers": {
-        "11": 1
+        "17": 1
       },
       "next_public_pane_number": 2,
       "public_tab_numbers": [
@@ -17,26 +17,32 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 11
+            "Pane": 17
           },
           "panes": {
-            "11": {
-              "cwd": "/Users/carlossantos/github/carlossantos/dotfiles"
+            "17": {
+              "cwd": "/Users/carlossantos/aptoide/Direct",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "3bcbf512-17f2-42f7-bb0f-502d8895ea8f"
+              }
             }
           },
           "zoomed": false,
-          "focused": 11,
-          "root_pane": 11
+          "focused": 17,
+          "root_pane": 17
         }
       ],
       "active_tab": 0
     },
     {
-      "id": "w8",
+      "id": "w16",
       "custom_name": null,
-      "identity_cwd": "/Users/carlossantos/github/carlossantos/dotfiles",
+      "identity_cwd": "/Users/carlossantos/aptoide/url-provider",
       "public_pane_numbers": {
-        "12": 1
+        "26": 1
       },
       "next_public_pane_number": 2,
       "public_tab_numbers": [
@@ -47,24 +53,162 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 12
+            "Pane": 26
           },
           "panes": {
-            "12": {
-              "cwd": "/Users/carlossantos/github/carlossantos/dotfiles"
+            "26": {
+              "cwd": "/Users/carlossantos/aptoide/url-provider",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "a8655ac1-d49e-45e9-8b03-0f5db10f9bbc"
+              }
             }
           },
           "zoomed": false,
-          "focused": 12,
-          "root_pane": 12
+          "focused": 26,
+          "root_pane": 26
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w19",
+      "custom_name": null,
+      "identity_cwd": "/Users/carlossantos/aptoide/football-rag",
+      "public_pane_numbers": {
+        "29": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 29
+          },
+          "panes": {
+            "29": {
+              "cwd": "/Users/carlossantos/aptoide/football-rag",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "1e0732f2-5f12-4ac8-a828-f998e61c44bc"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 29,
+          "root_pane": 29
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w1C",
+      "custom_name": null,
+      "identity_cwd": "/Users/carlossantos/Downloads",
+      "public_pane_numbers": {
+        "32": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 32
+          },
+          "panes": {
+            "32": {
+              "cwd": "/Users/carlossantos/Downloads",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "bd1aeefc-eaab-498f-8d38-067aabdc85e7"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 32,
+          "root_pane": 32
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w1F",
+      "custom_name": null,
+      "identity_cwd": "/Users/carlossantos",
+      "public_pane_numbers": {
+        "35": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 35
+          },
+          "panes": {
+            "35": {
+              "cwd": "/Users/carlossantos"
+            }
+          },
+          "zoomed": false,
+          "focused": 35,
+          "root_pane": 35
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w1G",
+      "custom_name": null,
+      "identity_cwd": "/Users/carlossantos",
+      "public_pane_numbers": {
+        "36": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 36
+          },
+          "panes": {
+            "36": {
+              "cwd": "/Users/carlossantos"
+            }
+          },
+          "zoomed": false,
+          "focused": 36,
+          "root_pane": 36
         }
       ],
       "active_tab": 0
     }
   ],
-  "active": 0,
-  "selected": 0,
-  "sidebar_width": 26,
+  "active": 5,
+  "selected": 5,
+  "sidebar_width": 22,
   "sidebar_section_split": 0.5,
   "collapsed_space_keys": []
 }
