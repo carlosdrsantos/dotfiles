@@ -1,4 +1,4 @@
-{ ... }:
+{ username, ... }:
 
 {
   # Determinate already manages the Nix daemon, so nix-darwin shouldn't.
@@ -7,9 +7,9 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "aarch64-darwin"; # use x86_64-darwin for Intel CPU
   
-  system.primaryUser = "carlossantos";
-  users.users.carlossantos = {
-    home = "/Users/carlossantos";
+  system.primaryUser = username;
+  users.users.${username} = {
+    home = "/Users/${username}";
   };
   system.stateVersion = 6;
   system.defaults = {
@@ -28,7 +28,7 @@
 
   nix-homebrew = {
     enable = true;
-    user = "carlossantos";
+    user = username;
     autoMigrate = true;
   };
   homebrew = {
@@ -44,6 +44,36 @@
     ];
     casks = [
       "wezterm"
+
+      # ── everyday ──
+      "google-chrome"
+      "firefox"
+      "obsidian"
+      "slack"
+      "zoom"
+      "whatsapp"
+      "localsend"
+      "stremio"
+
+      # ── editors and ai ──
+      "cursor"
+      "zed"
+      "visual-studio-code"
+      "claude"
+      "chatgpt"
+      "t3-code"
+      "codex"
+      "codexbar"
+
+      # ── dev ──
+      "docker-desktop"
+      "tableplus"
+      "postgres-app"
+      "http-toolkit"
     ];
+    # Needs an App Store sign-in before the first rebuild.
+    masApps = {
+      Bitwarden = 1352778147;
+    };
   };
 }

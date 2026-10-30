@@ -1,5 +1,5 @@
 
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 let
   dotfiles = "${config.home.homeDirectory}/.dotfiles";
@@ -26,8 +26,8 @@ let
 in
 
 {
-  home.username = "carlossantos";
-  home.homeDirectory = "/Users/carlossantos";
+  home.username = username;
+  home.homeDirectory = "/Users/${username}";
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
@@ -40,6 +40,17 @@ in
     lazygit
     neovim
     tmux
+    bat
+    gh
+    git
+    git-crypt
+    gnupg
+    wget
+    ffmpeg
+    imagemagick
+    go
+    nodejs
+    pnpm
     # the font everything renders in
     nerd-fonts.hack
 
@@ -140,6 +151,8 @@ in
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    # node comes from the read-only nix store, so `npm i -g` installs here instead.
+    NPM_CONFIG_PREFIX = "${config.home.homeDirectory}/.local";
     # rustaceanvim needs the adapter and the library as two separate paths.
     CODELLDB_PATH = "${codelldbRoot}/adapter/codelldb";
     CODELLDB_LIBLLDB_PATH = "${codelldbRoot}/lldb/lib/liblldb.dylib";
