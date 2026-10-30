@@ -1,5 +1,9 @@
-
-{ config, pkgs, username, ... }:
+{
+  config,
+  pkgs,
+  username,
+  ...
+}:
 
 let
   dotfiles = "${config.home.homeDirectory}/.dotfiles";
@@ -12,8 +16,7 @@ let
   # codelldb ships as a vscode extension: the adapter binary and the liblldb it
   # dlopens sit in two different subdirectories of one store path. rustaceanvim
   # needs both, so the library path is exported as an env var further down.
-  codelldbRoot =
-    "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb";
+  codelldbRoot = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb";
   codelldb = pkgs.writeShellScriptBin "codelldb" ''
     exec ${codelldbRoot}/adapter/codelldb "$@"
   '';
@@ -32,11 +35,11 @@ in
 
   home.packages = with pkgs; [
     # ── cli i use constantly ──
-    ripgrep   # fast search, also what snacks.picker greps with
-    fd        # fast find, also what snacks.picker lists files with
-    fzf       # fuzzy finder
-    jq        # json on the command line
-    postgresql_18  # for psql; newest client talks to older servers too
+    ripgrep # fast search, also what snacks.picker greps with
+    fd # fast find, also what snacks.picker lists files with
+    fzf # fuzzy finder
+    jq # json on the command line
+    postgresql_18 # for psql; newest client talks to older servers too
     lazygit
     neovim
     tmux
@@ -60,43 +63,43 @@ in
     tree-sitter
 
     # ── C / C++ ──
-    clang-tools        # clangd and clang-format
-    cmake              # neocmakelsp is not much use without it
+    clang-tools # clangd and clang-format
+    cmake # neocmakelsp is not much use without it
     neocmakelsp
     cmake-format
     cmake-lint
 
     # ── Python ──
-    basedpyright       # types
-    ruff               # lint, format and import sorting
+    basedpyright # types
+    ruff # lint, format and import sorting
 
     # ── Lua ── (for editing this config)
     lua-language-server
     stylua
 
     # ── Nix ── (for editing this flake)
-    nil                # LazyVim's nix extra uses nil_ls
+    nil # LazyVim's nix extra uses nil_ls
     nixfmt
-    statix             # nix antipattern linter
+    statix # nix antipattern linter
 
     # ── Rust ──
     rust-analyzer
-    rustfmt            # rust-analyzer shells out to this to format
+    rustfmt # rust-analyzer shells out to this to format
 
     # ── Go ──
     gopls
     gofumpt
-    gotools            # provides goimports
+    gotools # provides goimports
     gomodifytags
     impl
-    delve              # dap adapter for go
+    delve # dap adapter for go
 
     # ── Web ──
-    vtsls              # LazyVim's default typescript server
-    vscode-langservers-extracted   # jsonls, html, cssls, eslint
+    vtsls # LazyVim's default typescript server
+    vscode-langservers-extracted # jsonls, html, cssls, eslint
     yaml-language-server
-    taplo              # toml
-    prettier          # LazyVim's conform config names this formatter "prettier"
+    taplo # toml
+    prettier # LazyVim's conform config names this formatter "prettier"
 
     # ── Markdown ──
     marksman
@@ -112,10 +115,10 @@ in
     debugpy-adapter
   ];
 
- programs.zsh = {
+  programs.zsh = {
     enable = true;
-    autosuggestion.enable = true;      # ghost text from history
-    syntaxHighlighting.enable = true;  # commands turn green when valid
+    autosuggestion.enable = true; # ghost text from history
+    syntaxHighlighting.enable = true; # commands turn green when valid
     initContent = ''
       bindkey '^f' autosuggest-accept
     '';

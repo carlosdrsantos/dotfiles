@@ -1,0 +1,2 @@
+# The dotted style (home.file.x = ...) is how this config is written on purpose.
+disabled = ["repeated_keys"]
