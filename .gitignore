@@ -1,0 +1,6 @@
+# home.nix links ~/.config/herdr to this repo, so herdr writes its runtime state here too
+home/.config/herdr/*.log
+home/.config/herdr/*.sock
+home/.config/herdr/session.json
+home/.config/herdr/session-backups/
+home/.config/herdr/release-notes.json
