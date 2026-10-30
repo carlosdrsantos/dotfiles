@@ -1,4 +1,3 @@
-
 # global agent instructions
 
 - Never use the em dash "—". Use plain dash "-" instead
@@ -12,4 +11,9 @@
   If something clearly looks off, even if it is not directly related to what you are doing, try to get it fixed along the way.
 - Apply that same high standard to engineering excellence: lint, test failures, and test flakiness.
   If you see one, even if it is not caused by what you are working on right now, still get it fixed.
-
+- Keep agent instructions in AGENTS.md, never in a CLAUDE.md. One file per repo, shared by every agent.
+  Claude Code does not discover AGENTS.md yet, so alongside it commit a CLAUDE.md whose entire contents
+  is the single line `@AGENTS.md`. Never duplicate the instructions across the two files.
+- When a step does not need my input, keep going. Put status notes in the same message as your next action.
+  Stop and ask only when you cannot continue without me, or before anything destructive: deleting data,
+  force-pushing, or changing anything outside the current repository.

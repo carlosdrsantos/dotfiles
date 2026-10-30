@@ -33,7 +33,10 @@
   };
   homebrew = {
     enable = true;
-    onActivation.cleanup = "none";  # don't remove unlisted packages (set to "zap" once casks/brews are fully listed)
+    # Don't remove unlisted packages. Note: "zap" is not a safe upgrade here - the
+    # claude-code cask's zap stanza trashes ~/.local/bin/claude, ~/.local/share/claude
+    # and ~/.claude*, which is where the native Claude Code install and its config live.
+    onActivation.cleanup = "none";
     onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
     brews = [
@@ -41,7 +44,6 @@
     ];
     casks = [
       "wezterm"
-      "claude-code"
     ];
   };
 }

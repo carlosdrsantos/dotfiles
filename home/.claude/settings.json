@@ -1,4 +1,5 @@
 {
+  "model": "opus[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -17,11 +18,30 @@
     "type": "command",
     "command": "input=$(cat); model=$(echo \"$input\" | jq -r '.model.display_name'); used=$(echo \"$input\" | jq -r '.context_window.used_percentage // empty'); if [ -n \"$used\" ]; then printf '\\033[2m%s | Context: %.0f%% used\\033[0m' \"$model\" \"$used\"; else printf '\\033[2m%s\\033[0m' \"$model\"; fi"
   },
+  "extraKnownMarketplaces": {
+    "apptech-skills": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/Aptoide/apptech-claude-skills.git"
+      }
+    }
+  },
+  "modelSettings": {
+    "claude-opus-5": {
+      "effortLevel": "xhigh"
+    },
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
+  "autoUpdatesChannel": "latest",
   "voice": {
     "enabled": true,
     "mode": "hold"
   },
   "skipDangerousModePermissionPrompt": true,
   "voiceEnabled": true,
-  "model": "opus[1m]"
+  "enabledPlugins": {
+    "apptech@apptech-skills": true
+  }
 }
